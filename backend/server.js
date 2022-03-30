@@ -23,8 +23,8 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const server = app.listen("https://charming-strudel-517f84.netlify.app/", () => {
-  console.log(`Server is working on `);
+const server = app.listen(process.env.PORT, () => {
+  console.log(`Server is working on http://localhost:${process.env.PORT}`);
 });
 
 // Unhandled Promise Rejection
